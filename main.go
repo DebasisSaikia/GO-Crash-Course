@@ -23,6 +23,12 @@ func main(){
 	var userTicket int
 
 
+	// Arrays- cannot mix the types in array
+	// var bookings = [50]string{}
+	var bookings [50]string
+
+
+
 	// type of
 	// fmt.Printf("conference name is %T\n",conferenceName)
 
@@ -38,7 +44,17 @@ func main(){
 	fmt.Println("Enter number of tickets")
 	fmt.Scan(&userTicket)
 
-	fmt.Printf("Thank you %v %v for booking %v tickets .Email is send to %v",firstName,lastName,userTicket,email)
+	remainingTickets=remainingTickets-userTicket
+
+    // assigning value to array
+	bookings[0]=firstName + " " + lastName
+
+	fmt.Printf("the whole array: %v\n",bookings)
+	fmt.Printf("the first value: %v\n",bookings[0])
+	fmt.Printf("the length is: %v\n",len(bookings))
+
+	fmt.Printf("Thank you %v %v for booking %v tickets .Email is send to %v\n",firstName,lastName,userTicket,email)
+	fmt.Printf("%v tickets are remaining now", remainingTickets)
 
 
 }
