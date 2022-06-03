@@ -17,10 +17,7 @@ func main(){
 	fmt.Println("Get your tickets here to attend");
 
 	// data types in go
-	var firstName string
-	var lastName string
-	var email string
-	var userTicket int
+	
 
 
 	// Arrays- cannot mix the types in array
@@ -33,7 +30,15 @@ func main(){
 	// type of
 	// fmt.Printf("conference name is %T\n",conferenceName)
 
-	// reading user input
+
+	// LOOPS
+	for{
+		var firstName string
+		var lastName string
+		var email string
+		var userTicket int
+
+	// READING USER INPUTS
 	fmt.Println("Enter you first name:")
 	fmt.Scan(&firstName)
 	fmt.Println("Enter your last name")
@@ -56,7 +61,6 @@ func main(){
 	fmt.Printf("the slice length is: %v\n",len(bookings))
 
 	fmt.Printf("Thank you %v %v for booking %v tickets .Email is send to %v\n",firstName,lastName,userTicket,email)
-	fmt.Printf("%v tickets are remaining now", remainingTickets)
-
-
+	fmt.Printf("%v tickets are remaining now\n", remainingTickets)
+	}
 }
